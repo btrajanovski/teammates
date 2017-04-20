@@ -180,7 +180,7 @@ public class InstructorHomePageUiTest extends BaseUiTestCase {
                                         .withUserId(instructorId)
                                         .toAbsoluteString();
         assertEquals(expectedEnrollLinkText, browser.driver.getCurrentUrl());
-        homePage.goToPreviousPage(InstructorHomePage.class);
+       // homePage.goToPreviousPage(InstructorHomePage.class);
 
         ______TS("link: course view");
         InstructorCourseDetailsPage detailsPage = homePage.clickCourseViewLink(courseId);
@@ -190,7 +190,7 @@ public class InstructorHomePageUiTest extends BaseUiTestCase {
                                         .withUserId(instructorId)
                                         .toAbsoluteString();
         assertEquals(expectedViewLinkText, browser.driver.getCurrentUrl());
-        homePage.goToPreviousPage(InstructorHomePage.class);
+       // homePage.goToPreviousPage(InstructorHomePage.class);
 
         ______TS("link: course edit");
         InstructorCourseEditPage editPage = homePage.clickCourseEditLink(courseId);
@@ -200,7 +200,7 @@ public class InstructorHomePageUiTest extends BaseUiTestCase {
                                         .withUserId(instructorId)
                                         .toAbsoluteString();
         assertEquals(expectedEditLinkText, browser.driver.getCurrentUrl());
-        homePage.goToPreviousPage(InstructorHomePage.class);
+      //  homePage.goToPreviousPage(InstructorHomePage.class);
 
         ______TS("link: course add session");
         InstructorFeedbacksPage feedbacksPage = homePage.clickCourseAddEvaluationLink(courseId);
@@ -234,7 +234,7 @@ public class InstructorHomePageUiTest extends BaseUiTestCase {
         homePage.verifyStatus(Const.StatusMessages.FEEDBACK_SESSION_REMINDERSSENT);
 
         //go back to previous page because 'send reminder' redirects to the 'Feedbacks' page.
-        homePage.goToPreviousPage(InstructorHomePage.class);
+       // homePage.goToPreviousPage(InstructorHomePage.class);
 
         ______TS("remind action: OPEN feedback session - inner button");
 
@@ -248,7 +248,7 @@ public class InstructorHomePageUiTest extends BaseUiTestCase {
         homePage.verifyStatus(Const.StatusMessages.FEEDBACK_SESSION_REMINDERSSENT);
 
         //go back to previous page because 'send reminder' redirects to the 'Feedbacks' page.
-        homePage.goToPreviousPage(InstructorHomePage.class);
+       // homePage.goToPreviousPage(InstructorHomePage.class);
 
         ______TS("remind particular users action: OPEN feedback session");
 
@@ -264,7 +264,7 @@ public class InstructorHomePageUiTest extends BaseUiTestCase {
         homePage.submitRemindParticularUsersForm();
         homePage.waitForPageToLoad();
         homePage.verifyStatus(Const.StatusMessages.FEEDBACK_SESSION_REMINDERSEMPTYRECIPIENT);
-        homePage.goToPreviousPage(InstructorHomePage.class);
+       // homePage.goToPreviousPage(InstructorHomePage.class);
 
         homePage.clickRemindOptionsLink(feedbackSessionOpen.getCourseId(), feedbackSessionOpen.getFeedbackSessionName());
         homePage.clickRemindParticularUsersLink(feedbackSessionOpen.getCourseId(),
